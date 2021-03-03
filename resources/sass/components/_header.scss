@@ -1,0 +1,85 @@
+.header {
+    grid-row: 1 / span 2;
+    grid-column: center-start / center-end;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+
+    @media only screen and (max-width: 900px) {
+        flex-direction: column;
+        grid-column: full-start / full-end;
+        padding: 0 2rem;
+    }
+
+    &__content {
+        flex: 1;
+
+        @media only screen and (max-width: 900px) {
+            margin-top: 10rem;
+        }
+    }
+
+    &__description {
+        line-height: 1.7;
+    }
+
+    &__learn-btn {
+        @media only screen and (max-width: 900px) {
+            display: none;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: 900px) {
+            margin-bottom: 3rem;
+            align-self: flex-end;
+            width: 100%;
+            align-items: flex-end;
+        }
+    }
+
+    &__illustration {
+        position: relative;
+        flex: 0 0 30vw;
+
+        padding-left: 2rem;
+        display: flex;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: 900px) {
+            flex: 1;
+            padding: 0;
+            flex-direction: column;
+        }
+
+        &-img {
+            width: 95%;
+            display: block;
+            animation: animateHomeImg 10s infinite;
+
+            @media only screen and (max-width: 900px) {
+                animation: none;
+                width: 70%;
+            }
+        }
+    }
+}
+
+.header2 {
+    grid-row: 1 / span 2;
+    grid-column: full-start / full-end;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: center;
+    background-image: url("../resources/imgs/section.jpg");
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    padding: 0 2rem;
+}

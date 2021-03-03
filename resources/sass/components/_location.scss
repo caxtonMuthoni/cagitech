@@ -1,0 +1,57 @@
+.locations {
+    grid-column: center-start / center-end;
+    padding: 10rem 0;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__icon {
+        font-size: 3rem;
+        color: $color-primary;
+        margin-right: 2rem;
+    }
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 4.5rem;
+        align-items: center;
+    }
+}
+
+
+.location {
+    &__img {
+        width: 90%;
+    }
+
+    &__feature {
+        display: flex;
+        margin-top: 2rem;
+        align-items: center;
+
+    }
+
+    &__feature:not(:first-of-type) &__text{
+        text-transform: capitalize !important;
+    }
+
+    &__email {
+        text-transform: lowercase !important;
+        color: $color-grey-dark-1;
+    }
+
+    &__icon {
+        flex: 0 0 6rem;
+        font-size: 2rem;
+        color: $color-primary-dark;
+    }
+
+    &__text {
+        color: $color-grey-dark-1;
+    }
+}

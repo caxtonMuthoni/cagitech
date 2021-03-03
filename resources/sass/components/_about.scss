@@ -1,0 +1,134 @@
+
+.about {
+    grid-column: full-start / full-end;
+    // grid-row: 3 / span 1;
+    background-color: $color-grey-light-1;
+    height: 100%;
+    padding: 15rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+
+    @media only screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+
+
+    &__content {
+        line-height: 1.6;
+        padding: 4rem 10rem;
+        
+        &--paragraph{
+             font-size: 1.65rem;
+             line-height: 1.65;
+
+         }
+        @media only screen and (max-width: 900px) {
+            padding: 2rem;
+            margin-bottom: 3rem;
+            width: 90%;
+        }
+
+    }
+
+    &__images {
+        position: relative;
+        padding: 4rem 10rem;
+    }
+
+    &__image {
+        width: 50%;
+        position: absolute;
+        transition: all 0.5s;
+        border-radius: 0.5rem;
+        backface-visibility: hidden;
+        outline-offset: 1rem;
+        z-index: 10;
+        display: inline-block;
+        box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+
+        &:hover {
+            z-index: 20;
+            outline: 0.4rem solid $color-primary;
+            transform: scale(1.1);
+        }
+
+        &--1 {
+            top: -10rem;
+            @media only screen and (max-width: 900px) {
+                top: -3rem;
+            }
+        }
+
+        &--2 {
+            left: -4rem;
+
+            @media only screen and (max-width: 900px) {
+                left: -1rem;
+                left: 2rem;
+            }
+        }
+
+        &--3 {
+            top: -4rem;
+            left: 24rem;
+
+            @media only screen and (max-width: 900px) {
+                top: -1rem;
+                left: 6rem;
+            }
+        }
+    }
+
+    &__images:hover &__image:not(:hover) {
+        transform: scale(0.95);
+    }
+
+    &__cycles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__cycle {
+        background-color: $color-primary;
+        padding: 1rem 2rem;
+        width: 15rem;
+        border-radius: 10rem;
+        color: $color-grey-light-1;
+        font-size: 1.4rem;
+        margin: 2rem 0;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+
+        &::after {
+            content: "";
+            height: 4.5rem;
+            background-color: $color-primary;
+            width: 1px;
+            position: absolute;
+            bottom: -4.5rem;
+            left: 50%;
+            z-index: 9;
+        }
+    }
+
+    &__indicator {
+        width: 4rem;
+        height: 4rem;
+        background-color: rgba($color-primary-dark, .5);
+        border-radius: 50%;
+        animation: indicateCycle 20s infinite ease-in;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-icon {
+            color: rgba(white, .6);
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.technologies {
+    grid-column: center-start / center-end;
+    padding: 8rem 0;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__list{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(19.75rem, 1fr));
+        grid-gap: 4.5rem;
+        align-items: center;
+    }
+}
+
+.technology {
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__icon {
+        max-width: 10rem;
+        max-height: 8rem;
+    }
+
+    &__name {
+        color: $color-grey-dark-1;
+        font-size: 2rem;
+        font-family: $display-font-family;
+    }
+
+    &__text {
+        padding: .7rem 2rem;
+        background-color: $color-grey-light-1;
+        border-radius: 10rem;
+        color: $color-grey-dark-1;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}

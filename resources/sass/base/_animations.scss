@@ -1,0 +1,59 @@
+@keyframes animateHomeImg {
+    0%  {
+        transform: scale(1);
+    }
+
+    50%  {
+        transform: scale(1.1) translateX(5rem);
+    }
+
+    100%  {
+        transform: scale(1);
+    }
+}
+
+@keyframes animateLogoImg {
+    0%  {
+        transform: translateY(0);
+    }
+
+    50%  {
+        transform: translateY(-2rem);
+
+    }
+
+    100%  {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes indicateCycle {
+    0% {
+          transform: translateY(2rem);
+    }
+
+    16.7% {
+        transform: translateY(13.5rem);
+    }
+
+    33.33% {
+        transform: translateY(21.5rem);
+    }
+
+    50% {
+        transform: translateY(29.5rem);
+    }
+
+    66.7% {
+        transform: translateY(37.5rem);
+    }
+
+    97% {
+        transform: translateY(45rem);
+    }
+
+    100% {
+        transform: translateY(50rem);
+    }
+}
