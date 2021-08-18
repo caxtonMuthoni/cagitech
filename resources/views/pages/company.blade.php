@@ -33,7 +33,7 @@
     <div class="team__leader-details">
       <p class="team__leader-name">Caxton Muthoni</p>
       <p class="team__leader-position mb-md">Chief Executive Officer, Co-Founder</p>
-      <p class="team__leader-quote">You can avoid technology but you can avoid its consequences</p>
+      <p class="team__leader-quote">You can avoid technology but you can't avoid its consequences</p>
     </div>
   </div>
 
