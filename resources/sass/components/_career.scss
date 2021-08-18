@@ -1,0 +1,28 @@
+.careers {
+    grid-column: center-start / center-end;
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.career {
+    width: 70%;
+
+    &__text {
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+
+    &__requirements {
+        list-style: decimal inside;
+    }
+
+    &__requirement{
+        font-size: 1.5rem;
+        &:not(:last-child){
+            margin-bottom: 1.2rem;
+        }
+    }
+}

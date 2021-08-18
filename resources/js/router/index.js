@@ -13,7 +13,7 @@ const routes = [
     },
 
     {
-        path: '/services',
+        path: '/svs',
         component: Services
     },
 

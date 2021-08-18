@@ -12,6 +12,10 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: 900px) {
+        padding: 10rem 4rem;
+    }
+
     &__heading {
         position: relative;
         margin-bottom: 3rem;
@@ -29,12 +33,9 @@
 }
 
 .customers {
+    width: 100%;
+    text-align: center;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 10rem;
-    align-items: flex-start;
-    justify-content: center;
 
     &__testmony {
         display: flex;
@@ -70,6 +71,7 @@
         height: 10rem;
         border-radius: 50%;
         margin-right: 2.5rem;
+        background-color: $color-grey-light-1;
     }
 
     &__personal {

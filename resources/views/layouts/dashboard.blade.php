@@ -4,6 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/resources/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
+
   <title>Cagitech Dashboard</title>
 
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -26,25 +34,11 @@
 
         <li class="nav-item">
           <a href="#" class="nav-link" data-toggle="modal" data-target="#modelId"> <i class="fas fa-power-off  text-danger  "></i></a>
-          <!-- <a class="nav-link" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                         <i class="fas fa-power-off  text-danger  "></i>
-          </a> -->
-
-          <!-- <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-              @csrf
-          </form> -->
         </li>
       </ul>
     </nav>
     <!-- /.navbar -->
 
-    <!-- Logout modal -->
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-    Launch
-  </button> -->
 
     <!-- Modal -->
     <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -78,7 +72,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="" class="brand-link">
-        <img src="{{asset('resources/imgs/logo 1.svg')}}" alt="Cagitech Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="{{asset('resources/favicons/android-chrome-192x192.png')}}" alt="Cagitech Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">CAGITECH</span>
       </a>
       <!-- Sidebar -->
@@ -107,15 +101,7 @@
                 </p>
               </router-link>
             </li>
-            <li class="nav-item">
-              <router-link to="/home" class="nav-link">
-                <i class="fas fa-chart-area  indigo nav-icon "></i>
-                <p>
-                  System Stats
-                  <span class="right badge badge-danger">New</span>
-                </p>
-              </router-link>
-            </li>
+
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy teal"></i>
@@ -126,7 +112,7 @@
                 </p>
               </a>
               <ul class="nav nav-treeview">
-                <router-link to="/services" class="nav-link">
+                <router-link to="/svs" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Management</p>
                 </router-link>

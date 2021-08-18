@@ -311,6 +311,10 @@ body {
   margin-right: 4rem;
 }
 
+.nav__link {
+  transition: all 0.5s;
+}
+
 .nav__link:link,
 .nav__link:visited {
   color: #3a4254;
@@ -324,7 +328,6 @@ body {
 
 .nav__link:hover,
 .nav__link:active {
-  border-bottom: 2px solid #6399c6;
   color: #6399c6;
 }
 
@@ -345,8 +348,19 @@ body {
 }
 
 .navbar__link--active {
-  border-bottom: 2px solid #6399c6 !important;
   color: #6399c6 !important;
+  position: relative;
+}
+
+.navbar__link--active::after {
+  position: absolute;
+  content: "";
+  background-color: #6399c6;
+  width: 0.8rem;
+  height: 0.8rem;
+  bottom: -1rem;
+  left: 50%;
+  border-radius: 10rem;
 }
 
 .nav__active {
@@ -570,7 +584,7 @@ body {
 }
 
 .about__content--paragraph {
-  font-size: 1.65rem;
+  font-size: 1.85rem;
   line-height: 1.65;
 }
 
@@ -716,9 +730,13 @@ body {
   transform: translateY(-1.5rem);
 }
 
+.feature__header {
+  text-transform: capitalize;
+}
+
 .feature__text {
-  font-size: 1.4rem;
-  font-weight: 100;
+  font-size: 1.8rem;
+  font-weight: 300;
   line-height: 1.6;
 }
 
@@ -733,6 +751,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonials {
+    padding: 10rem 4rem;
+  }
 }
 
 .testimonials__heading {
@@ -752,11 +776,8 @@ body {
 }
 
 .customers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 10rem;
-  align-items: flex-start;
-  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
 .customers__testmony {
@@ -792,6 +813,7 @@ body {
   height: 10rem;
   border-radius: 50%;
   margin-right: 2.5rem;
+  background-color: #f6f8f9;
 }
 
 .customers__personal {
@@ -828,6 +850,90 @@ body {
 .customers__personal-social a:hover,
 .customers__personal-social a:active {
   color: #f6f8f9;
+}
+
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 20rem;
+  /*
+  These are the item elements. jCarousel works best, if the items
+  have a fixed width and height (but it's not required).
+  */
+}
+
+@media only screen and (max-width: 900px) {
+  .jcarousel {
+    padding: 2rem 3rem;
+  }
+}
+
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+  /* Optional, required in this case since it's a <ul> element */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Clear fix */
+}
+
+.jcarousel ul:before {
+  content: " ";
+  display: table;
+}
+
+.jcarousel ul:after {
+  content: " ";
+  display: table;
+}
+
+.jcarousel li {
+  /* Required only for block elements like <li>'s */
+  float: left;
+  width: 0;
+  height: 100%;
+  margin-right: 10rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .jcarousel li {
+    margin-right: 6rem;
+  }
+}
+
+/**
+ *  pagination
+ */
+
+.jcarousel-pagination {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+.jcarousel-pagination a {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #101d2c;
+}
+
+.jcarousel-pagination a.active {
+  background: #6399c6;
+}
+
+@media only screen and (max-width: 900px) {
+  .jcarousel-pagination {
+    display: none;
+  }
 }
 
 .mission {
@@ -1039,6 +1145,7 @@ body {
   visibility: visible;
   opacity: 1;
   transition: all 0.5s;
+  text-transform: capitalize !important;
 }
 
 .contact_us-form-input {
@@ -1050,6 +1157,18 @@ body {
   transition: all 0.5s;
   border-radius: 0.5rem;
   display: block;
+}
+
+.contact_us-form-input::-moz-placeholder {
+  text-transform: capitalize;
+}
+
+.contact_us-form-input:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+.contact_us-form-input::placeholder {
+  text-transform: capitalize;
 }
 
 .contact_us-form-input--1 {
@@ -1097,6 +1216,37 @@ body {
   .btn-send-message {
     width: 90%;
   }
+}
+
+.is-invalid {
+  border: 1px solid #dc3545 !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+.sent {
+  grid-column: center-start/center-end;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sent__img {
+  width: 20rem;
+  -webkit-animation: animateLogoImg 10s infinite;
+          animation: animateLogoImg 10s infinite;
+}
+
+.sent__btn {
+  font-size: 1.5rem;
+}
+
+.sent__header {
+  text-align: center;
 }
 
 .locations {
@@ -1250,7 +1400,6 @@ body {
   width: 13rem;
   height: 4rem;
   border-radius: 4%;
-  background-color: #f6f8f9;
   display: block;
   margin: 2rem auto;
   -webkit-animation: animateLogoImg 5s infinite;
@@ -1305,14 +1454,37 @@ body {
   color: #6399c6;
 }
 
+.top_footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .top_footer {
+    flex-direction: column;
+  }
+}
+
 .footer {
   background-color: #101d2c;
   grid-column: full-start/full-end;
-  padding: 4rem;
+  padding: 10rem 4rem;
+}
+
+.footer__company {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex: 2;
+  padding: 0 4rem 0 2rem;
   justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer__company {
+    flex: 1;
+  }
 }
 
 .footer__logo {
@@ -1328,27 +1500,39 @@ body {
   }
 }
 
-.footer__text {
-  text-align: center;
-  font-size: 1.9rem;
-  color: #f6f8f9;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  width: 50%;
+.footer__social {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-self: center;
 }
 
-@media only screen and (max-width: 900px) {
-  .footer__text {
-    width: 95%;
-  }
+.footer__social a {
+  margin-bottom: 1.5rem !important;
+}
+
+.footer__text {
+  font-size: 1.9rem;
+  color: #f6f8f9;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .footer-nav {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-items: center;
-  grid-gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer-nav {
+    align-items: flex-start;
+  }
 }
 
 .footer-nav__link:link,
@@ -1358,6 +1542,8 @@ body {
   text-transform: uppercase;
   transition: all 0.5s;
   display: block;
+  margin-top: 2rem;
+  font-size: 1.4rem;
 }
 
 .footer-nav__link:active,
@@ -1385,5 +1571,34 @@ body {
 .footer__legal-link:visited {
   color: aqua;
   transform: scale(1.1);
+}
+
+.careers {
+  grid-column: center-start/center-end;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.career {
+  width: 70%;
+}
+
+.career__text {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.career__requirements {
+  list-style: decimal inside;
+}
+
+.career__requirement {
+  font-size: 1.5rem;
+}
+
+.career__requirement:not(:last-child) {
+  margin-bottom: 1.2rem;
 }
 

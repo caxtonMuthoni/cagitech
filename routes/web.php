@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\CareerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('/sent', function () {
+//     return view('pages.sent');
 // });
 
 
@@ -24,9 +26,10 @@ Route::get('/contact', [HomeController::class, 'contact']);
 Route::get('/services', [HomeController::class, 'services']);
 Route::get('/technologies', [HomeController::class, 'technologies']);
 Route::get('/company', [HomeController::class, 'company']);
-// Route::get('/contact', [HomeController::class, 'contact']);
+Route::post('/send', [MessageController::class, 'store'])->name('send');
+Route::get('/careers', [CareerController::class, 'index'])->name('careers');
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'home'])->name('home')->middleware('auth');
 
-Route::get('/{any}', [HomeController::class, 'home'])->where('any', '.*');
+Route::get('/{any}', [HomeController::class, 'home'])->where('any', '.*')->middleware('auth');;

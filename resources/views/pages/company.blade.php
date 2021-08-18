@@ -33,7 +33,7 @@
     <div class="team__leader-details">
       <p class="team__leader-name">Caxton Muthoni</p>
       <p class="team__leader-position mb-md">Chief Executive Officer, Co-Founder</p>
-      <p class="team__leader-quote">You can avoid technology but you can avoid its consequencies</p>
+      <p class="team__leader-quote">You can avoid technology but you can avoid its consequences</p>
     </div>
   </div>
 
@@ -42,7 +42,7 @@
       <img src="resources/imgs/emma.png" alt="" class="team__leader-img">
     </div>
     <div class="team__leader-details">
-      <p class="team__leader-name">Emmanuel Maina</p>
+      <p class="team__leader-name">Mwangi Maina</p>
       <p class="team__leader-position mb-md">Chief Technical Officer</p>
       <p class="team__leader-quote">The advance of technology is based on making it fit in so that you don't really even notice it, so it's part of everyday life.</p>
     </div>

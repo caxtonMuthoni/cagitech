@@ -32960,6 +32960,33 @@ a.text-muted:hover {
   color: #6cb2eb;
 }
 
+.table__icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.tech__icon {
+  font-size: 3rem;
+  color: #3490dc;
+}
+
+.td__name {
+  white-space: nowrap !important;
+}
+
+.table__avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #f8fafc;
+}
+
+.logo-img {
+  margin-left: 4rem;
+  display: block;
+  height: 4rem;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

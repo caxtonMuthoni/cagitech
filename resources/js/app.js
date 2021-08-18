@@ -6,6 +6,16 @@ window.Vue = Vue;
 import VueRouter from 'vue-router'
 import routes from './router/index'
 import VueProgressBar from 'vue-progressbar'
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+import { HasError, AlertError } from 'vform'
+
+// Vue laravel form validator
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
+
+//  Sweet alert
+Vue.use(VueSweetalert2);
 
 // Vprogressbar
 const options = {

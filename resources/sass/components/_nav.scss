@@ -45,6 +45,7 @@
     }
 
     &__link {
+        transition: all .5s;
         &:link ,
         &:visited {
             color: $color-grey-dark-1;
@@ -58,7 +59,6 @@
 
         &:hover,
         &:active {
-            border-bottom: 2px solid $color-primary;
             color: $color-primary;
         }
     }
@@ -82,8 +82,19 @@
 }
 
 .navbar__link--active {
-    border-bottom: 2px solid $color-primary !important;
+    // border-bottom: 2px solid $color-primary !important;
     color: $color-primary !important;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        background-color: $color-primary;
+        width: .8rem;
+        height: .8rem;
+        bottom: -1rem;
+        left: 50%;
+        border-radius: 10rem;
+    }
 }
 
 .nav__active {

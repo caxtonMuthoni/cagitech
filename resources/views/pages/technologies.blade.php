@@ -17,7 +17,14 @@
     </div>
 
     <div class="technologies__list">
+        @foreach($technologies as $technogy)
         <div class="technology">
+            <img src="{{asset('resources/imgs/'.$technogy->icon)}}" alt="" class="technology__icon">
+            <p class="technology__name">{{$technogy->technology}}</p>
+            <p class="technology__text">{{$technogy->category}}</p>
+        </div>
+        @endforeach
+        <!-- <div class="technology">
             <img src="resources/imgs/technologies/vue.webp" alt="" class="technology__icon">
             <p class="technology__name">Vue</p>
             <p class="technology__text">Web development</p>
@@ -111,7 +118,7 @@
             <img src="resources/imgs/technologies/tensorflow.png" alt="" class="technology__icon">
             <p class="technology__name">Tensorflow</p>
             <p class="technology__text">Artificial Intelligence</p>
-        </div>
+        </div> -->
     </div>
 
     <h3 class="heading-4 mb-md mt-hg">Dont See your technology <a href="/contact" class="contact">contact us</a> for more info</h3>
